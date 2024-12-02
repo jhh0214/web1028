@@ -7,7 +7,7 @@ $(document).ready(function () {
       sectionsColor: ['transparent', '#eee', 'cadetblue', '#ccc'],
       // 페이지 이동 내비게이션
       navigation: true,
-      navigationTooltips: ['About Hyundai', 'Model', 'Event', 'Customer Service'],
+      navigationTooltips: ['메인 페이지', '독립문의 탄생', '누구나 인정한 독립문', '독립문의 미래'],
       showActiveTooltip: true,
       // 슬라이드 메뉴
       slidesNavigation: true,
