@@ -139,7 +139,11 @@ h1,h2 {position : relative;
 
 .s2 {background-color : #161616; background : url(../images/gallary/paper-piece.png) no-repeat 0px 700px;}
 .s2 p {
-	color: #555; 
+	font-size : 30px;
+	font-weight : bold;
+	color: #e94a22;
+	position : relative;
+	top : -20px;
 }
 .s2 #tab_wrap {
 	height: 400px;
