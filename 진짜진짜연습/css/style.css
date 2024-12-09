@@ -1,0 +1,144 @@
+body {
+	margin : 0 auto;
+	background-color : #ccc;
+}
+* {	
+	margin : 0 auto;
+	box-sizing : border-box;
+}
+#wrapper { width : 1920px;}
+/**헤더**/
+.header {
+	position : fixed;
+	height : 80px; 
+	width : 1920px;
+	border-bottom : 1px solid #fff;
+}
+.header>* {position : absolute;}	
+.header h1 {
+	top : 20px;
+	left : 3%;
+}
+.header ul {
+	top : 30px;
+	left : 20%;
+}
+.header div { 
+	top : 30px;
+	border-radius : 5px;  
+	height : 40px; 
+	font-size : 15px;
+	font-weight : bold;
+	line-height : 40px;
+	padding : 0 15px;
+	color : #fff;
+}
+.header div:nth-of-type(1) {
+	right : 13%;
+	border : 1px solid #fff;
+}
+.header div:nth-of-type(2) {
+	background-color : #9e0016;
+	right : 3%;
+}
+
+/**메인 메뉴**/
+.Menu li {
+	position : relative;
+	display : inline-block;
+	white-space : nowrap;
+	padding : 10px 50px;
+	width : 110px;
+	text-align : center;
+	
+ }
+ .Menu a {
+	 color : #fff;
+	 text-decoration : none;}
+.Menu li:hover>.inner {display : block;}  
+.inner {
+	 display : none;
+	 position : absolute;
+	}
+.inner li {
+	 display : block;
+	 width : 110px;
+	 height : 35px;
+	 line-height : 35px;
+	 position : relative;
+	 right : 60px;
+	 top : 10px;
+}	
+
+ /** 리모컨? **/
+ .Button {
+	width : 25px;
+	position : fixed;
+	list-style : none;
+	background-color : #333;
+	top : 70%;
+	right : 25px;
+ }
+ .Button li {
+	height : 20px;
+	width : 20px;
+	margin : 20px;
+}
+ .Button li:nth-of-type(1):before 
+ {content : ""; display : inline-block; width : 20px; height : 20px; background-color : #fff;}
+ .Button li:nth-of-type(2):before 
+ {content : ""; display : inline-block; width : 20px; height : 20px; background-color : #fff;}
+ .Button li:nth-of-type(3):before 
+ {content : ""; display : inline-block; width : 20px; height : 20px; background-color : #fff;}
+ .Button li:nth-of-type(4):before 
+ {content : ""; display : inline-block; width : 20px; height : 20px; background-color : #fff;}
+ .Button li:nth-of-type(5):before 
+ {content : ""; display : inline-block; width : 20px; height : 20px; background-color : #fff;}
+ .Button li:nth-of-type(6):before 
+ {content : ""; display : inline-block; width : 20px; height : 20px; background-color : #fff;}
+/**메인 배너**/
+ .banner {
+	position : relative;
+	top : -120px;
+	width : 1920px;
+	height : 1080px;
+	background : url(../images/tmpMain.jpg);
+	z-index : -10;
+}
+.banner p {
+	font-size : 50px; 
+	color : #fff;
+	position : relative;
+	top : 500px;
+	left : 150px;
+	font-weight : 700;
+	text-shadow : 2px 2px 0 #333;
+}
+.banner p span {
+	font-size : 80px;
+}
+ /** 프리뷰 **/
+ .preview {
+	 position : relative;
+	 top : -120px;
+	 background-color : #fff;
+	 height : 380px;
+ }
+.preview h2,.preview p {
+	text-align : center;
+}
+.preview h2 {
+	font-size : 50px;
+	padding-top : 90px;
+
+} 
+.preview h2 span {color : #9e0016;}
+.preview p {
+
+	color : #fff;
+	background-color : #9e0016;
+	font-size : 15px;
+	padding : 15px;
+	width : 270px;
+	margin-top : 50px;
+}
