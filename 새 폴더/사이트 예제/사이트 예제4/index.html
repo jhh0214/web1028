@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+	<title>사이트 예제4</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	.banner1:active {animation-name: fadeOut;
+	animation-duration: 3s;
+	animation-iteration-count: 1;}
+	
+	
+	@keyframes fadeOut {100%{opacity: 0;}   0%{opacity: 1;}}
+	
+	</style>
+	
+	  <script>
+	function animation(){
+		image.banner.action();
+	}
+      </script>
+	
+	
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1 class="logo"><a href="#"><img src="images/logo.jpg" alt="로고1" height="60" width="60"><a></h1>
+			<ul class="topmenu">
+				<li><a href="#">홈</a></li>
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">회원가입</a></li>
+				<li><a href="#">사이트맵</a></li>
+			</ul>
+			<div class="nav">
+				<ul class="navmenu">
+					<li><a href="#">그래픽프로그램</a></li>
+					<li><a href="#">포토샵</a></li>
+					<li><a href="#">일러스트</a></li>
+					<li><a href="#">웹표준</a></li>
+					<li><a href="#">웹영상</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="banner">
+			<img src="images/banner.jpg" alt="배너" height="250" width="1400" class="banner1">
+			<img src="images/banner2.jpg" alt="배너" height="250" width="1400" class="banner2">
+			<img src="images/banner3.jpg" alt="배너" height="250" width="1400" class="banner3">
+			<img src="images/banner4.jpg" alt="배너" height="250" width="1400" class="banner4">
+		</div>
+		<div class="content1">
+			<img src="images/photo.jpg" alt="포토샵" height="120" width="350">
+			<img src="images/webstd.jpg" alt="웹사이트" height="120" width="650">
+			<img src="images/illrust.jpg" alt="일러스트" height="120" width="350">
+		</div>
+		<div class="content2">
+			<img src="images/home1.jpg" alt="홈1">
+			<img src="images/home2.jpg" alt="홈2">
+		</div>
+		<div class="notice">
+			<div class="not1">공지사항</div>
+			<div class="not2">새소식</div>
+		</div>
+		<div class="footer">
+			<div class="ftlogo"><img src="images/logo1.jpg" alt="로고2" height="60" width="60"></div>
+			<div class="copy">
+				<div class="box">
+				<ul class="copyul">
+					<li><a href="#">회사 소개</a></li>
+					<li><a href="#">개인정보 보호정책</a></li>
+					<li><a href="#" class="example">CONTACT US</a></li>
+					<li><a href="#" class="example">SITE MAP</a></li>
+				</ul>
+				</div>
+				<p>(우) 17064 경기도 용인시 기흥구 신구로 12번길 32, 3층,<br>  E-mail : webmaster@abc.com</p>
+				<p>Copyright since 2019 ⓒ by DoDream Corporation All Rights Reserved.</p>
+			</div>
+			<div class="linkimg">
+				<a href="#"><img src="images/css3_logo.png" alt="링크1" height="60" width="40"></a>
+				<a href="#"><img src="images/html5_logo.png" alt="링크2" height="60" width="40"></a>
+			</div>
+		</div>
+	</div>
+		<div class="asd">
+			<input type="image" src="D:\전현호\사이트 예제\사이트 예제6\images\stop.png" onclick="animation()">
+		</div>
+</body>
+</html>

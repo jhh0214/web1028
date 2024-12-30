@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>요소찾기(getElementById)</title>
+	<script>
+		function process() {
+			// var obj = document.getElementById("target");
+			var obj = document.myform.name;
+			alert( obj.value + "님 환영합니다" );
+		}
+	</script>
+</head>
+<body>
+	<form name="myform">
+		성 명 : <input type="text" id="target" name="name">
+		<input type="button" value="제출" onclick="process()">
+	</form>
+	<ul>
+		<li>List Item1</li>
+		<li>List Item2</li>
+		<li>List Item3</li>
+		<li>List Item4</li>
+		<li>List Item5</li>
+	</ul>
+	<script>
+		var list = document.getElementsByTagName("ul")[0];
+		var allItems = list.getElementsByTagName("li");
+		for(i=0; i<allItems.length; i++){
+			alert(allItems[i].firstChild.data);
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

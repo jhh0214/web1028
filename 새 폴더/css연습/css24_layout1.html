@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="UTF-8">
+	  <title> layout1 </title>
+	 <style>
+		* {margin : 0px; padding : 0px; box-sizing : border-box;}
+		
+		.wrapper {
+			width : 1400px;
+			margin : 0 auto;
+		}
+		
+		.header {
+			height : 100px;
+			background-color : lightgreen;
+		}
+		
+		.content { height : 500px;
+			margin : 10px 0;
+		}
+		
+		.content>*{
+			width : 49.5%;
+			height : 500px;
+			background-color : lightgreen;
+			}
+			
+		.left {float : left;}	
+		.right {float : right;}
+		
+		.footer {
+			height : 80px;
+			background-color : lightgreen;
+		}
+	 </style>
+	</head>
+	<body>
+	<div class="wrapper">
+		<div class="header">
+		header
+		</div>
+			<div class="content">
+				<div class="left">1</div>
+				<div class="right">2</div>
+			</div>
+				<div class="footer">
+				footer
+				</div>
+	</div>
+	</body>
+</html>   

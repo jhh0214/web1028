@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="UTF-8">
+	  <title> inline-block </title>
+	 <style>
+	 body {background-image : url(123.png); border : 1px solid red;
+	 width : 1900; height : 800px; margin : 0; padding;}
+	 
+	 *{box-sizing : border-box;}
+	
+	
+	.main {position : relative; width:500px; height:500px; background-color:#ccc;}  
+	
+	div {width : 200px; height : 50px;
+	}
+	div.one {background-color : orange;
+	position : static; }
+	div.two {background-color : skyblue;
+	position : relative;}
+	div.three {background-color : lightgreen;
+	position : absolute; 
+	left : 300px;
+	top : 0px;}
+	
+	 </style>
+	</head>
+	<body>
+	<br>
+	<div class="main">
+		<div class="one">블록1</div>
+		<div class="two">블록2<br>position : relative</div>
+		<div class="three">블록3<br>position : absolute</div>
+	</div>
+	</body>
+</html>   

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>setInterval</title>
+	<script>
+		function a(b){
+			b.style.border = "3px solid blue";
+			}
+		function c(b){
+			b.style.border = "";
+		}	
+		function d() {
+			alert("111")
+		}
+	</script>
+	<style>
+	 div{
+		width : 200px;
+		height : 200px;
+		background-color : #f00;
+	 }
+	</style>
+</head>
+<body>
+	<div onmouseover="a(this)" onmouseout="c(this)" onclick="d()">
+	</div>
+</body>
+</html>
+
+
+
+

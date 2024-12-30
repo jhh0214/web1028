@@ -1,0 +1,53 @@
+* {margin : 0; padding : 0; box-sizing: border-box;}
+ul {list-style : none; text-align: center;}
+ul li {display : inline-block;}
+a:visited, a:link {text-decoration : none; color : #000;}
+a:hover, a:active {text-decoration : none; font-weight : bold; color : #f00;}
+
+.wrapper {width : 1400px; margin : 5px auto;}
+.wrapper>* {position : relative; border : 0px dashed red;  margin-bottom : 10px;}
+	
+	.header {height : 150px;  margin-bottom : 0px;}
+	.header>* {margin : 8px 0;}
+		.logo {}
+		.topmenu {position : absolute; top : 0px; right : 5px;} 
+		.topmenu li {font-size : 18px;}
+		.topmenu li:before {content : "|"; padding : 0 20px;}
+		.topmenu li:nth-child(2):before{content:""}
+	.nav {height : 40px; width : 1400px; border-radius : 20px; background-color : #e8c7c1;}
+		.navmenu {font-size : 20px; line-height : 40px;}
+		.navmenu li {padding : 0 40px;}
+		
+	.banner {height : 250px;}	
+	.banner>* {position : absolute; top : 0;}	
+	.banner1 {z-index : 5}
+	.banner2 {z-index : 4}
+	.banner3 {z-index : 3}
+	.banner4 {z-index : 2}
+	
+	.content1 {height : 120px; width : 1400px;}
+	.content1>* {float : left; margin : 0 7px;}
+
+	.content2 {height : 120px;}
+	.content2>* {float : left; margin : 0 20px;}
+	
+	.notice {height : 120px;}
+	.notice>* {width : 660px; height : 120px; float : left; margin : 0 20px; background-color:#ddd;}
+	
+	.footer {height : 150px; margin-top : 0;}
+	
+		.ftlogo {position : absolute; left : 0; top : 45px;}
+		.copy {width : 1400px; height : 150px; text-align : center; padding : 30px;} 
+		.copy > p {color : #666;}
+		.linkimg {position : absolute; right : 0; top : 45px;}
+			.box {background-color : #e8c7c1; width : 700px; margin : 0 auto; border-radius : 20px;}
+			
+			.copyul li { padding : 0 30px; }
+			.copy li:nth-child(3){font-family : arial;}  
+			.copy li:nth-child(4){font-family : arial;}
+			.copy li:nth-child(3):hover {font-family : arial;}
+			.copy li:nth-child(4):hover {font-family : arial;}
+			
+			.copy p:nth-child(2) {margin-top : 10px;}
+			
+	.asd {width : 100px; height : 100px; background-color : black; position : fixed; left : 30%;}

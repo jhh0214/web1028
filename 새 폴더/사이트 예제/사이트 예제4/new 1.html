@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+	.banner1 {    animation-name: fadeOut;
+	 animation-duration: 5s;
+	 animation-iteration-count: infinite;
+	 width : 100px; height : 100px;
+	 background-color : #f00;
+	}
+	   @keyframes move {
+      from { left: 0; }
+      to   { left: 300px; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @keyframes changeColor {
+      from { background-color: red; }
+      to   { background-color: blue; }
+    }
+	
+  </style>
+</head>
+<body>
+  <div class="banner1"></div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+	<title>사이트 예제1</title>
+	<style>
+	* {border : 1px dashed red; position : relative;}
+	ul {list-style : none; text-align : center;}
+	ul li {display : inline-block;}
+	a:link,a:visited {color : #333; text-decoration : none;}
+	a:hover {font-weight : bold;}
+	
+	
+	.wrapper {width : 1400px; margin : 0 auto;} 
+		.header {overflow : hidden;}
+		.logo {position:absolute; left:600px;}
+		.menu {float : right; height : 100px; width : 500px;}
+		.menu_ul li {padding : 0 20px; width : 60px;}
+		
+		.nav {margin : 0 auto; width : 700px; text-align : center;}
+			.nav_ul li {padding : 0 30px;}
+		
+		.content {overflow : hidden;}
+			.login {position:absolute; top : 250px;
+			width : 400px; margin : auto 0; float : left;}
+			.info {width : 990px; float : right; height : 600px;}
+		
+		.footer {height : 100px;}
+			.copyright {height : 100px; width : 990px; float : left;}
+			.sns {height : 100px; width : 400px; float : right;}
+		
+	
+	
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="logo">
+		     <a href="#"><img src="images\title.png"></a>
+			</div>
+			<div class="menu">
+			  <ul class="menu_ul">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Sitemap</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">AboutUs</a></li>
+			  </ul>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<ul class="nav_ul">
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">제품안내</a></li>
+				<li><a href="#">정보광장</a></li>
+				<li><a href="#">커뮤니티</a></li>
+				<li><a href="#">관련링크</a></li>
+			</ul>
+		</div>
+		
+		<div class="content">
+			<div class="login">
+				<form method="post">
+					아이디 : <input type="text" class="id"><br>
+					비밀번호 : <input type="text" class="passward"><br>
+					<input type="submit">
+				</form>
+			</div>
+			
+			<div class="info">
+				정보
+			</div>
+		</div>
+	
+		<div class="footer">
+			<div class="copyright">
+				copyright
+			</div>
+			 
+			<div class="sns">
+			sns
+			</div>
+		</div>
+	
+	</div>
+</body>
+</html>

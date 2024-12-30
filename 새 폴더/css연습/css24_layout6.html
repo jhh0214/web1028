@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="UTF-8">
+	  <title> layout1 </title>
+	 <style>
+		* {margin : 0px; padding : 0px; box-sizing : border-box; border : 1px dashed red;}
+		
+		.wrapper {
+				width : 1400px;
+				margin : 0 auto;
+				}
+			
+			.wrapper>* {margin : 10px 0;}
+			
+			.header { width : 1000px; height : 100px; margin : auto; }
+			
+			.navi {height : 100px;}
+			
+			.content {overflow : hidden; width : 1000px; margin : 0 auto;}
+			 .CL,.CR {width : 490px;}			 
+			  .CL {float : left}
+			  .CR {float : right}
+				.CLT,.CRT {margin-bottom : 10px;}
+				 .CLT,.CRB {height : 200px;}
+				 .CLB,.CRT {height : 100px;}
+			
+			.footer {overflow : hidden}
+				.FL,.FR {width : 690px; height : 100px;}
+				 .FL {float : left}
+				 .FR {float : right}
+			
+			 
+			
+	
+	 </style>
+	</head>
+	<body>
+	<div class="wrapper">
+		<div class="header">1</div>
+		<div class="navi">2</div>
+		<div class="content">	
+			<div class="CL">
+			<div class="CLT">3</div>
+			<div class="CLB">4</div>
+			</div>
+			<div class="CR">
+			<div class="CRT">5</div>
+			<div class="CRB">6</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="FL">7</div>
+			<div class="FR">8</div>
+		</div>
+	</div>
+
+	</div>
+	</body>
+</html>   

@@ -1,0 +1,31 @@
+	* {margin : 0; padding : 0; }
+		ul { list-style : none; text-align : center;}
+		ul li {display : inline-block;}
+		a:link, a:visited {color : #333; text-decoration : none;}
+		a:hover, a:active {color : #f00; text-decoration : none;}	
+	
+	.wrapper {width : 1400px; margin : 0 auto;}
+	.wrapper>* {position : relative; margin : 10px 0;}
+	/*헤더영역*/
+	.header {height : 100px; margin-top : 0;}
+		h1 {position : absolute; top : 0; left : 50%; margin-left : -125px;}
+		.lang {position : absolute; top : 0; right : 10px;}
+		.lang li:before {content : "|"; margin : 14px;}
+		.lang li:first-child:before {content : "";}
+	/*네비영역*/
+	.nav {height : 40px;}
+	.mainmenu li {padding :0 50px; font-weight : bold;}
+	/*컨텐츠영역*/
+	.content {height : 400px; width : 1400px;}
+	.box {height : 400px; width : 400px; float : left; margin: 0 8px; background-color : #333;}
+	.box:last-child {width : 130px;}
+	/*푸터영역*/
+	.footer {height : 150px;}
+	.btlogo {position : absolute; top : 0; left : 0; width : 250px; height : 150px;}
+	.copy {position : absolute;  width : 900px; height : 150px; top : 0px; left : 250px;
+			text-align : center; padding-top : 20px;}
+	.copyul li:before {content : "|"; padding : 10px;}
+	.copyul li {font-weight : bold;}
+	.copyul li:first-child:before {content : "";}
+	.link {weight : 250px; position : absolute; right : 0px;}
+	

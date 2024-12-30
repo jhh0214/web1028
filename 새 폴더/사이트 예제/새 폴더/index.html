@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홍길동</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {margin:0;}
+    img {width:100%; vertical-align: top;}
+    div {text-align: center;}
+
+    .tablet {display: none;}
+    .desktop {display: none;}
+
+    @media (min-width:576px) {
+      .tablet {display: block;}
+      .phone {display: none;}
+      .desktop {display: none;}
+    }
+    @media (min-width:992px) {
+      .desktop {display: block;}
+      .phone {display: none;}
+      .tablet {display: none;}
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="desktop.png" class="desktop" alt="데스크탑">
+    <img src="tablet.png" class="tablet" alt="테블릿">
+    <img src="phone.png" class="phone" alt="폰">
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="UTF-8">
+	  <title> layout1 </title>
+	 <style>
+		* {margin : 0px; padding : 0px; box-sizing : border-box; border : 1px dashed red;}
+		
+		.wrapper {
+				width : 1400px;
+				margin : 0 auto;
+				}
+
+			.head {overflow : hidden;}
+			.head > div { height : 100px; width : 300px;}
+			 .HL {float : left;}
+			 .HR {float : right;}
+			 
+			.content {overflow : hidden; margin : 10px 0;}
+			.content>* {height : 300px; width : 690px;}
+			 .left {float : left;}
+			 .right {float : right;}
+			
+			.footer {overflow : hidden;}
+			 .FL {float : left; width : 400px; height : 100px;}
+			 .FR {float : right;}
+			  .FR>* {width : 900px; height : 45px; margin : 0 0 5px 0;}
+	
+	 </style>
+	</head>
+	<body>
+	<div class="wrapper">
+		<div class="head">
+		<div class="HL">1</div>
+		<div class="HR">2</div>
+		</div>
+		<div class="content">
+			<div class="left">3</div>
+			<div class="right">4</div>
+		</div>	
+		<div class="footer">
+		<div class="FL">5</div>
+		<div class="FR">
+			<div class="FRT">6</div>
+			<div class="FRB">7</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+</html>   

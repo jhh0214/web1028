@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>세계의 미술작품</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script>
+			function a(){
+				var madal = document.getElementById("c");
+				madal.style.display = "none";
+			}
+			function b(){
+				var madal = document.getElementById("c");
+				madal.style.display = "block";
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+			<div class="menu">
+				<ul>
+					<li><a href="#"> 소장처별</a>
+						<ul class="submenu">
+							<li><a href="#">한국</a></li>
+							<li><a href="#">프랑스</a></li>
+							<li><a href="#">이탈리아</a></li>
+							<li><a href="#">독일</a></li>
+						</ul>
+					</li> 
+					<li><a href="#"> 장르별</a>
+						<ul class="submenu">
+							<li><a href="#">회화</a></li>
+							<li><a href="#">판화</a></li>
+							<li><a href="#">공예/고대유물</a></li>
+							<li><a href="#">그 외</a></li>
+						</ul>
+					</li>	
+					<li><a href="#"> 테마별</a>
+						<ul class="submenu">
+							<li><a href="#">초상화/인물</a></li>
+							<li><a href="#">종교</a></li>
+							<li><a href="#">신화/문화</a></li>
+							<li><a href="#">일상/스포츠</a></li>
+						</ul>
+					</li>
+					<li><a href="#"> 시대별</a>
+						<ul class="submenu">
+							<li><a href="#">1900대 이전</a></li>
+							<li><a href="#">1900년대</a></li>
+							<li><a href="#">현대</a></li>
+							<li><a href="#">그 외</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div class="slider">
+			<div class="view">
+			<div class="window">
+				<a href="#"><img src="images/slide1.png" alt="슬라이드1">
+				<span>세계의 유명작품 소개</span>
+				</a>
+				<a href="#"><img src="images/slide2.png" alt="슬라이드2">
+				<span>세계의 10대 화가</span>
+				</a>
+				<a href="#"><img src="images/slide3.png" alt="슬라이드3">
+				<span>유명한 화가 순위</span>
+				</a>
+			</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="notice">
+				<ul>
+					<h4>공지사항</h4>
+						<li>디자이너의 판화 특별전. 경계 between
+						<span>2022-11-08</span></li>
+						<li>디자이너의 판화 특별전. 경계 between
+						<span>2022-11-08</span></li>
+						<li>디자이너의 판화 특별전. 경계 between
+						<span>2022-11-08</span></li>
+						<li>디자이너의 판화 특별전. 경계 between
+						<span>2022-11-08</span></li>
+						<li>디자이너의 판화 특별전. 경계 between
+						<span>2022-11-08</span></li>
+				</ul>
+			</div>
+			<div class="gallery">
+				<h4>갤러리</h4>
+				<ul>
+				<li><a href="#"><img src="images/gal1.png" alt="갤러리1"></a></li>
+				<li><a href="#"><img src="images/gal2.png" alt="갤러리2"></a></li>
+				<li><a href="#"><img src="images/gal3.png" alt="갤러리3"></a></li>
+				</ul>
+			</div>
+			<div class="banner">
+				<a href="#"><img src="images/banner.png" alt="배너">
+				<div>배너</div>
+				</a>
+			</div>
+		</div>
+		<footer>
+			<h2 onclick="b()"><a><img src="images/logo_bottom.png" alt="푸터 로고"></a></h2>
+			<div class="copyright">
+				COPYRIGHT ALL RIGHTS RESERVED 세계의 미술작품
+			</div>
+			<div class="sns">
+				<img src="images/blog.png" alt="블로그">
+				<img src="images/facebook.png" alt="패이스북">
+				<img src="images/twitter.png" alt="트위터">
+			</div>
+		</footer>
+		<div class="modal" id="c">
+			<div class="madalup">
+				<div class="uptitle">경계, BETWEEN</div>
+				<div class="upbody">
+					아트앤에디션 프로젝트의 일환으로 디자이너의 판화 
+					특별전이 열립니다. 아트앤에디션이 디자인하우스 
+					갤러리 모이소에서 디자이너의 판화 특별전, 
+					"경계"를 진행합니다. 다양한 디자이너의 작품들을 
+					만나보세요
+				</div>
+				<div class="upbtn" onclick="a()">닫기</div>
+			</div>
+		</div>
+	</body>
+</html>

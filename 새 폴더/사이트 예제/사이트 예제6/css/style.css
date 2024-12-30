@@ -1,0 +1,74 @@
+@charset "UTF-8";
+	* { margin : 0; padding : 0; box-sizing : border-box;}
+	ul li {display : inline-block;}
+	a:link,a:visited {text-decoration : none; color : #fff;}
+	a:hover,a:active {text-decoration : none; color : #f00;}
+	
+	.wrapper {width : 1800px; margin : 0 auto;}
+	.wrapper>* {position : relative;}
+	
+	.header {background-color : #4f4f4f; height : 160px;}
+		.ILink {position : absolute; top : 20px; left : 10px;}
+		.ILink li {padding-right : 10px;}
+		.snsLink {position : absolute; top : 15px; right : 10px;}
+		.snsLink li {padding-left : 10px;}
+		.snsLink img {width : 35px;}
+		.header h1 {position : absolute; top : 80px; left : 10px; z-index : 5;}
+	
+		.nav {height : 100px; width : 1800px;
+			position : absolute; top : 60px; left : 0;
+			background-color : #282828;}
+		
+		.mainmenu {width : 1400px; height : 60px; 
+		position : relative; left : 200px; top : 20px; text-align : center;}
+		.mainmenu li{padding : 17px 20px;}
+		.mainmenu li a{font-size : 20px;}
+		
+		.header p {position : absolute; top : 80px; right : 20px;}
+		.header img {border-radius : 7px;}
+	
+	.banner {height : 500px;}
+
+	.content {height : 800px;}
+	
+	.Lcontent {height : 800px; width : 940px; float : left; padding : 40px;}				
+		.Lcontent>* {border : 1px solid #ddd; }
+		.notice ul { text-align : center; }
+		.notice ul a { font-weight : bold; font-size : 18px; color : #000;}
+		.notice ul li:hover {background-color : #ddd;}
+		.notice ul li { padding : 10px 15px;}
+		.notice table { width : 90%; border-collapse : collapse; margin : 30px auto;}
+		.notice table td { height : 40px; border : 1px solid #ddd; padding : 0 10px;} 
+	.intro {margin-top : 20px;}
+	
+	.Rcontent {height : 800px; width : 860px; float : right; padding : 40px 0 40px 0;}
+	.Rcontent>*>* {height : 350px; width : 400px; float : left;} 
+	.Rcontent h4 img {width : 360px; height : 272px;}
+	.news1,.news3 {margin :0 30px 0 30px;}
+	.Rtop,.Rbottom {height : 370px;}
+	.Rcontent>div>div {border : 1px solid #ddd; }
+		.Rcontent h3 {margin : 10px 0 10px 20px;}
+		.Rcontent h4,ul {text-align : center;}
+		.Rcontent ul li {padding : 0 10px;}
+		.Rbottom>div {background-color : #393846;}
+		.Rbottom h3 {color : #fff;}
+	
+#footer {position : relative; top : -5px;}	
+	#fTop {background-color : #585858; height : 400px;}
+		#ftLeft,#ftCenter {width : 460px; height : 400px; float : left;} 
+		#ftRight {width : 860px; height : 400px; float : right; position : relative;}
+		#ftRight p {color : #fff;}
+		#ftRight h2 {color : #fff; font-family : sans-serif; font-weight : normal; margin : 30px 0;}
+		.fLink {position : relative; right : 25px;}
+		.fLink li:before {content : "|"; padding :  0 7px 0 4px;}
+		.fLink li:first-child:before {content : "";}
+		figure {position : absolute; bottom : 10px; right : 10px;}
+		
+	#fBottom {background-color : #585858; height : 80px;}
+		.lfoot {float : left; width : 200px;}
+		.rfoot {float : right; width : 200px;}
+		#fBottom ul {float : left; width : 1400px; height : 80px;}
+		#fBottom ul li{padding : 0 10px;}
+		#fBottom ul li:nth-child(2),#fBottom ul li:nth-child(3){position : relative; top: 10px;}
+		
+

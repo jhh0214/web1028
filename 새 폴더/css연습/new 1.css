@@ -1,0 +1,6 @@
+body {font-family : 굴림,gulim,sans-serif;}
+h1,h2 {color : green;}
+li {color : red; border : 1px solid blue; border-radius : 50px; width : 300px;}
+strong {color : #d4ac1b}
+em {font-style : normal;}
+

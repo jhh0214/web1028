@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF=8">
+  <title>입력 요소</title>
+  <script>
+	function send(){
+		document.frm.submit();
+	}
+  </script>
+ </head>
+  <body>
+   <form method="get" action="" name="frm">
+    <fieldset>
+	<legend>개인정보</legend>
+    <label>아이디 :</label> <input type="text" size="10" name="id" required minlength="2" maxlength="8"> <br>
+    <label>비밀번호:</label> <input type="password" size="10" name="pw" required> <br>
+	<label>성명 :</label> <input type="text" name="name"> <br>
+	<label>생년월일 :</label> <input type="date" name="birth"> <br>
+	<label>성별 :</label> 남<input type="radio" name="gender"> 여<input type="radio" name="gender"> <br>
+    </fieldset>
+    좋아하는 과일은? 
+	사과 <input type="checkbox" name="fruit">
+	포도 <input type="checkbox" name="fruit">
+	귤 <input type="checkbox" checked name="fruit"> <br>
+	<input type="reset" value="다시쓰기">
+	<input type="button" value="확인" onclick="alert('&quot;확인&quot;')"><br>
+   <textarea rows="7" cols="60"></textarea><br>
+   <select>
+    <option>BMW</option> 
+    <option>VOLVO</option>
+    <option>BENZ</option>
+   </select><br>
+   <input type="file"><br>
+   몸무게 :<input type="number" min="30" max="150" step="5"> <br>
+   학습수준 : <input type="range" min="0" max="100" step="5"><br>
+   좋아하는 색상은 : <input type="color"><br>
+   <input type="image" src="D:\전현호\html5\8강-입력양식\image\button.png" onclick="send()">
+   </form>
+  </body>
+</html>

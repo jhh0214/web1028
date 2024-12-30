@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="UTF-8">
+	  <title> layout1 </title>
+	 <style>
+		* {margin : 0px; padding : 0px; box-sizing : border-box; position : relative;}
+		
+		.wrapper {
+			width : 1400px;
+			margin : 0 auto;
+		}
+		.content {height : 500px;}
+		.content>* {
+			height : 500px;
+		}
+		.left {
+				width : 400px;
+				float : left;
+				}
+		.left>* {
+				background-color : lightgreen; 
+				}
+		.LT {height : 180px; margin-bottom : 10px;}
+		.LB {height : 310px;}
+		
+		
+		.right  {
+		width : 990px;
+		float : right;
+		}
+		
+		.RT { margin-bottom : 10px; 
+		height : 180px; width : 800px; 
+		left : 190px;
+		background-color : lightgreen;}
+
+		.RB>* {
+		width : 380px;
+		background-color : lightgreen;
+		}
+		.RBLT {height : 150px; margin : 10px 0;}
+		.RBLB {height : 150px;}
+		
+		.RBR  {top : -310px; left : 390px;
+		width : 600px;
+		height : 310px;}
+		
+		
+		.footer {
+		margin-top : 10px;
+		background-color : lightgreen;
+		height : 80px;
+		}
+	
+	 </style>
+	</head>
+	<body>
+	<div class="wrapper">
+	<div class="content">
+		<div class="left">
+			<div class="LT">LT</div>
+			<div class="LB">LB</div>
+		</div>
+		
+		<div class="right">
+			<div class="RT">RT</div>
+			<div class="RB">
+				<div class="RBLT">1</div>
+				<div class="RBLB">2</div>
+				<div class="RBR">3</div>
+			</div>
+		</div>
+	</div>	
+		<div class="footer">footer<div>
+	</div>
+	</body>
+</html>   

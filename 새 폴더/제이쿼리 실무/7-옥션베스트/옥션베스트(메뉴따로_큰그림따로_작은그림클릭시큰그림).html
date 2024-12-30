@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>옥션베스트상품만들기 (작은그림클릭시 큰이미지보이기) </title>
+		<style>
+			* { margin : 0; padding : 0; }
+			ul { list-style : none; }
+			.banner { width : 920px; position : relative; margin : 0 auto; }
+			.banner1 { width : 630px; margin : 0 auto;}
+			.banner1 li { float : left; }
+		</style>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script>
+			$(document).ready(function(){
+			$(".m1").mouseover(function(){
+				$(this).attr("src",$(this).attr("src").replace(".png","_on.png"))
+			});
+			$(".m1").mouseout(function(){
+				$(this).attr("src",$(this).attr("src").replace("_on.png",".png"))
+			});
+			$(".banner1 > li > a").click(function(){
+				var name = $(this).attr("href");
+				$(".big").attr("src", name);
+				return false;
+			});
+			});
+		</script>
+	</head>
+	<body>
+	<div>
+		<div class="banner">
+			<ul class="banner1">
+				<li><a href="images/1.png"><img src="images/1s.png" class="m1"></a></li>
+				<li><a href="images/2.png"><img src="images/2s.png" class="m1"></a></li>
+				<li><a href="images/3.png"><img src="images/3s.png" class="m1"></a></li>
+				<li><a href="images/4.png"><img src="images/4s.png" class="m1"></a></li>
+				<li><a href="images/5.png"><img src="images/5s.png" class="m1"></a></li>
+				<li><a href="images/6.png"><img src="images/6s.png" class="m1"></a></li>
+				<li><a href="images/7.png"><img src="images/7s.png" class="m1"></a></li>
+			</ul>
+			<p><img class="big" src="images/1.png"></p>
+		</div>			
+	</div>	
+	</body>
+</html>

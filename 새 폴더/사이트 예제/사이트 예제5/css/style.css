@@ -1,0 +1,46 @@
+	
+	* {margin : 0; padding : 0;}
+	ul li {display : inline-block;}
+	a:link,a:visited {text-decoration : none; color : #000;}
+	a:hover,a:active {text-decoration : none; color : #f00;}
+	
+	.wrapper {width : 1400px; margin : 0 auto;}
+	.wrapper>* {position : relative;}
+	
+	.header {height : 90px;}
+		.topmenuleft {position : absolute; left : 0px;}
+		.topmenuright {position : absolute; right : 7px;}
+		.logo {margin : 0 auto; width: 328px; height: 95px;}
+		.nav {height : 60px;}
+		.navi {line-height : 60px; text-align : center;}
+		.navi li { padding : 0 20px;}
+		.navi a {font-family : HY견고딕, sans-serif; font-size : 20px;}
+		.header ul li:before {content : "|"; padding : 0 7px 0 4px;}
+		.header ul li:first-child:before {content : "";}
+		
+		
+	.place {margin-top : 10px; padding-bottom : 5px;}
+	.place>* {font-size : 18px;}
+	.place p {display : inline-block; }
+	.place div {float : right;}
+	.place strong {color : #ff8000;}
+	
+	.banner1 {border-top : 1px solid #000; padding-top : 10px;}
+	.banner1 img {border-radius : 20px;}
+	
+
+	.content {height : 500px; margin-top : 10px; }
+	.content h4 {padding : 0 0 5px 0px; border-bottom : 1px solid #000; font-size : 18px;}
+	.content p {float : left; height : 450px; margin : 10px 50px;}
+	
+	.footer {background-color : #333; margin-top : -5px; height : 150px; position:relative;}
+	#lfooter {color : #999; margin-left : 135px; padding-top : 40px;}
+	#lfooter p:last-child {color : #555; margin-top : 5px;}
+	
+	#rfooter {position : absolute;  right : 60px; top : 20px; width : 240px;}
+	#rfooter p {color : #fff;}
+	
+	.info1 {margin : -24px 20px 10px 20px;}
+	.tel {font-size : 30px; margin-top : -10px;}
+	.online {border : 1px solid #fff; border-radius : 5px; height : 45px;
+	text-align : center; line-height : 45px; width : 195px; margin-left : -5px;}

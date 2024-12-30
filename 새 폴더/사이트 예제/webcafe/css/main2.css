@@ -1,0 +1,40 @@
+
+
+.login {
+	background-image : radial-gradient(circle at top right, #ffc848, #ff8208);	
+	border-radius : 5px; padding : 10px; box-shadow : 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.login h1 {color : #fedd9a; font-weight : bold; font-size : 15px; padding : 0 0 10px 10px;}
+.login input {width : 92px; height : 18px; border-radius : 3px 3px 0 0;}
+.login label {display : inline-block; width : 48px; padding-left : 5px;}
+ fieldset {background-color  : #fff; padding : 10px 10px 0 10px; 
+ border : 1px solid #fff; position : relative;}
+
+.login button {width : 50px; height : 50px; position : absolute; 
+ background-image : linear-gradient(to bottom, #fa5f18 0%, #fa4306 100%);
+	right : 10px; top : 10px; font-size : 11px; border-radius : 3px;
+	color : #fff; border : 1px solid #ff4e00;}
+ .login fieldset {padding : 10px 0 10px 0; border-bottom : 1px solid #ccc;}
+ #userId {margin-bottom : 6px;}
+.memberLink {background-color : #fff; border-radius : 0 0 3px 3px; padding : 0 10px; overflow : hidden;}
+.join {padding : 10px 3px; float : right;} .find {padding : 10px 0; float : left;}
+.memberLink a:before {content : "g"; font-family : webcafeIcon; color : #fa4306; position : relative; top : 1px; right : 1px;}
+
+.validation { margin : 20px 0;}
+.validation li{border : 1px solid #ccc; margin-bottom : 10px;
+ background-image : linear-gradient(to bottom, #fff 0%, #ededed 100%); width : 248px; height :30px; border-radius : 15px;}
+.validation a {font-size : 12px; font-weight : bold; display : inline-block; line-height : 30px; text-indent  : 45px;
+background : url(images/validation_icon.png) no-repeat 15px 5px; background-size : 20px 20px; color : #888;}
+
+.term {width : 250px; height : 135px; margin-top : 20px; border : 1px solid #ccc; border-radius : 5px;
+background-image : linear-gradient(to bottom, #fff 0%, #ededed 100%);}
+.term h1 {font-size : 14px; padding : 15px 20px;}
+.term dl {width : 208px; height : 72px; padding-left : 20px; }
+.term dt {float : right; padding-right : 72px; margin-bottom : 5px;}
+.term dd {float : left;}
+.term dd:nth-child(2) {padding-right : 10px;}
+.term dd:nth-child(3) {width : 130px; left : 90px; bottom : 25px; line-height : 1.45; font-size : 12px; color : #8a8e91;}
+.term dt {left : 90px; color : #296897; font-weight : bold;}
+
+.eventRelatedArea { background-image : linear-gradient(to bottom, #fff 0%, #ededed 100%); border : 1px solid #ccc; border-radius : 5px;}

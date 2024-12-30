@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+  <title>
+   입력양식 예제
+  </title>
+</head>
+ <body>
+  <form method="post">
+   <fieldset>     <legend>카드 정보 입력</legend>
+  <ol> 
+    <li>
+         <fieldset>     <legend>카드 타입</legend>
+     <ol>
+	   <li><input type="radio" name="1"required> visa</li>
+       <li><input type="radio" name="1"> AmEx </li>
+       <li><input type="radio"name="1"> Mastercard</li>
+  </li>
+	</ol>   
+		 </fieldset> 
+	<li>카드 번호 <input type="number"required></li>
+	<li>CRC 번호 <input type="number"required></li>
+	<li>카드 소유자 이름 <input type="text" placeholder="카드 상의 이름"required></li>
+  </ol>
+  </fieldset>
+  <fieldset>
+  <input type="submit" value="구매">
+  </fieldset>
+  </form>
+ </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드와 원으로 현재 슬라이드 표시</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* 슬라이드 컨테이너 스타일 */
+        .slider-container {
+            width: 500px; /* 슬라이드 전체 너비 */
+            height: 300px; /* 슬라이드 전체 높이 */
+            position: relative;
+        }
+
+        .slidelist {
+            display: flex;
+        }
+
+        .slidelist a {
+            width: 500px;
+            height: 300px;
+        }
+
+        .slidelist img {
+            width: 500px;
+            height: 100%;
+        }
+
+        /* 원을 표시할 컨테이너 스타일 */
+        .dot-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot-container span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+        }
+
+        /* 활성화된 원 스타일 */
+        .active {
+            background-color: #333;
+			scale : 1.7;
+        }
+
+        /* 버튼 스타일 */
+        #toggleBtn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slidelist">
+            <a href="#"><img src="images/link1.jpg" alt="Image 1"></a>
+            <a href="#"><img src="images/link2.jpg" alt="Image 2"></a>
+            <a href="#"><img src="images/link3.jpg" alt="Image 3"></a>
+        </div>
+    </div>
+
+    <!-- 슬라이드 아래 원 표시 -->
+    <div class="dot-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <button id="toggleBtn">일시정지</button>
+
+    <script>
+        $(document).ready(function() {
+            var slideInterval; // 자동 슬라이드 변수
+            var isPaused = false; // 일시정지 상태
+            var currentSlide = 0; // 현재 슬라이드 번호 (0부터 시작)
+            var slideCount = $(".slidelist a").length; // 슬라이드 개수
+
+            // 슬라이드를 자동으로 전환하는 함수
+            function startSlideShow() {
+                slideInterval = setInterval(function() {
+                    // 슬라이드 이동
+                    $(".slidelist").animate({"marginLeft": "-500px"}, function() {
+                        $(".slidelist a:first").appendTo(".slidelist"); // 첫 번째 항목을 마지막으로 이동
+                        $(".slidelist").css({"marginLeft": "0"}); // marginLeft를 0으로 초기화
+                    });
+
+                    // 현재 슬라이드 번호 갱신
+                    currentSlide = (currentSlide + 1) % slideCount; // 슬라이드는 3개만 있으므로 3으로 나눈 나머지값
+                    updateDots(); // 원 업데이트
+                }, 2000); // 2초마다 슬라이드 전환
+            }
+
+            // 슬라이드 일시정지 / 재개
+            function pauseSlideShow() {
+                clearInterval(slideInterval);
+            }
+
+            // 원의 활성화 상태를 업데이트하는 함수
+            function updateDots() {
+                // 모든 원을 비활성화 상태로 만들기
+                $(".dot").removeClass("active");
+                // 현재 슬라이드에 해당하는 원을 활성화
+                $(".dot").eq(currentSlide).addClass("active");
+            }
+
+            // 페이지 로드 시 자동 슬라이드 시작
+            startSlideShow();
+
+            // 버튼 클릭 시 슬라이드 일시정지 / 재개
+            $("#toggleBtn").click(function() {
+                if (isPaused) {
+                    startSlideShow();  // 슬라이드 재개
+                    $(this).text("일시정지");
+                } else {
+                    pauseSlideShow();  // 슬라이드 일시정지
+                    $(this).text("재개");
+                }
+                isPaused = !isPaused;
+            });
+
+            // 원 클릭 시 해당 슬라이드로 이동 (옵션)
+            $(".dot").click(function() {
+                var index = $(this).index(); // 클릭한 원의 인덱스
+                currentSlide = index;
+                $(".slidelist").css({"marginLeft": "0"}); // 슬라이드를 0으로 초기화
+                var slideMove = 500 * index; // 이동할 거리 계산
+                $(".slidelist").animate({"marginLeft": "-" + slideMove + "px"}, function() {
+                    updateDots(); // 원 상태 업데이트
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

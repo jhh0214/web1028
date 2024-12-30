@@ -1,0 +1,262 @@
+@charset "utf-8";
+.hidden,legend,caption {
+	position : absolute;
+	left : -9999em;
+}fieldset {border : 0;} 
+legend
+
+/* 웹폰트 */
+@font-face {
+    font-family:'Nanum';
+    font-weight:400;
+    src: url('font/NanumGothic.eot');
+    src: url('font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('font/NanumGothic.woff') format('woff'),
+		 url('font/NanumGothic.ttf') format('truetype');
+}
+@font-face {
+    font-family:'NanumBold';
+    font-weight:600;
+    src: url('font/NanumGothicBold.eot');
+    src: url('font/NanumGothicBold.eot?#iefix') format('embedded-opentype'),
+         url('font/NanumGothicBold.woff') format('woff'),
+		 url('font/NanumGothicBold.ttf') format('truetype');
+}
+@font-face {
+    font-family:'NanumEX';
+    font-weight:900;
+    src: url('font/NanumGothicExtraBold.eot');
+    src: url('font/NanumGothicExtraBold.eot?#iefix') format('embedded-opentype'),
+         url('font/NanumGothicExtraBold.woff') format('woff'),
+		 url('font/NanumGothicExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'webcafeIcon';
+    font-weight:400;
+    src: url('font/webcafeIcon.eot');
+    src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'),
+         url('font/webcafeIcon.woff') format('woff'),
+         url('font/webcafeIcon.ttf') format('truetype'),
+         url('font/webcafeIcon.svg#webcaferegular') format('svg');
+}
+/* 초기화(기본 사항) */
+* {
+	margin : 0;
+	padding : 0;
+}
+ul { list-style : none; }
+/* 링크 스타일 */
+a:link {
+	color : #4f4f4f;
+	text-decoration : none;
+}
+a:visited {
+	color : #000;
+	text-decoration : none;
+}
+a:hover, a:focus {
+	color : #f00;
+	text-decoration : none;
+}
+/* 기본 스타일 */
+body {
+	color : #000;
+	background-color : #fff;
+	font-size : 0.75em;
+	line-height : 1.2;
+	font-family : nanum;
+}
+/* 건너뛰기 링크 */
+#skipNav {
+	position : absolute;
+	left : -9999em;
+}
+#skipNav:focus {
+	left : 50%;
+	margin : 3px 0 0 -3em;
+	padding : 5px 15px;
+	color : #fff;
+	background-color : #000;
+	outline : 0;
+	z-index : 10;
+}
+/* 전체 레이아웃 */
+#wrapper {
+	background-color : #fff;
+	background-image : url(images/bg_flower.png), linear-gradient(to bottom, 
+						#c7c7c7 0%, #fff 100%);
+	background-repeat : no-repeat;
+	background-position : center top;
+}
+#header, #visual, #contentsArea, #slogan, #footerInner {
+	width : 940px;
+	margin : 0 auto;
+	box-sizing : border-box;
+}
+#header {
+	height : 110px;
+	background-color : #fff;
+	padding : 0 30px;
+	border-radius : 0 0 15px 15px;
+	position : relative;
+}
+#visual {
+	height : 120px;
+	position : relative;
+}
+#contentsArea {
+	min-height : 400px;
+	padding : 30px 30px 0 30px;
+	background-color : #fff;
+	border-radius : 15px 15px 0 0;
+	overflow : hidden;
+}
+#usefulArea {
+	width : 250px;
+	float : left;
+	margin-right : 30px;
+}
+#infoArea {
+	width : 380px;
+	float : left;
+	margin-right : 30px;
+}
+#linkArea {
+	width : 190px;
+	float : left;
+}
+#slogan {
+	padding : 15px 0;
+	position : relative;
+}
+#footer {
+	padding : 15px 0;
+	background-image : linear-gradient(to bottom, #c7c7c7 0%, #fff 70%, #fff 100%);
+}
+#footerInner {
+	position : relative;
+}
+/* 헤더 영역 */
+.logo {
+	position : absolute;
+	top : 35px;
+	left : 60px;
+}
+.infoLink {
+	text-align : right;
+}
+.infoLink li {
+	display : inline-block;
+	padding : 8px 0 7px 3px;
+}
+.infoLink li:before {
+	content : ":";
+	padding-right : 8px;
+}
+.infoLink li:first-child:before {
+	content : "";
+}
+/* 메인 메뉴 */
+.mainMenu {
+	border-top : 2px solid #000;
+	background-image : linear-gradient(to bottom, #ffc848 0%, #ff8208 40%,
+				#ff8208 60%, #ffc848 100%);
+	border-radius : 0 0 5px 5px;
+	height : 45px;
+	padding-left : 225px;
+}
+.mainMenu li, .mainMenu a {
+	display : inline-block;
+}
+.mainMenu > li > a {
+	font-family : NanumEX;
+	font-size : 14px;
+	letter-spacing : 1px;
+	padding : 15px 20px 14px;
+	color : #fff;
+	text-shadow : 1px 0px rgba(0,0,0,0.2), -1px 0px rgba(0,0,0,0.2),
+				0px 1px rgba(0,0,0,0.2);
+}
+.mainMenu > li > a:hover, .mainMenu > li > a:focus {
+	color : #ff0;
+}
+.mainMenu > li > a:hover:after {
+	content : "";
+	display : block;
+	width : 100%;
+	height : 2px;
+	background : #000;
+	position : relative;
+	top : 12px;
+}
+.mainMenu > li {
+	position : relative;
+}
+.mainMenu ul {
+	position : absolute;
+	white-space : nowrap;
+	z-index : 10;
+	display : none;
+}
+.mainMenu li:hover>ul{
+	display:block; 
+	}
+.mainMenu li:hover>li{
+	transform: translate(50px, 0px);
+	transition : 0.3s;}
+	.mainMenu ul a {padding : 8px 0 7px 15px;}
+	.mainMenu ul a:before {content : "r"; font-family : webcafeIcon; position : relative; top : 3px;}
+	.mainMenu ul a:hover:before,.mainMenu ul a:focus:before
+	{content : "c"; font-family : webcafeIcon; position : relative; top : 3px; color : f00;}
+ 
+	@keyframes textani {
+		0% {font-size : 12px; top :0px; left : 0px; opacity : 0.2;}
+		100% {font-size : 24px; top :75px; left : 400px; opacity : 1;}
+	}
+	@keyframes flower {
+		0% {opacity : 0;}
+		100% {opacity : 1;}
+	}
+	
+	#visual p {font-family : Georgia,serif; font-size : 24px; 
+	font-weight : bold; animation : textani 1s;  
+	position : absolute; top :75px; left : 400px;}
+	
+	#visual:before,#visual:after{content : ""; display : block; width : 100%; height : 140px; 
+	background-repeat : no-repeat; animation : flower 1s; animation-iteration-count : INFINITE;
+	animation-direction : alternate;}
+	
+	#visual:after {background-image : url(images/ani_flower_01.png),url(images/ani_flower_02.png);
+		background-position : 10px -20px, 800px 30px; animation-delay : 1.5s;}
+	#visual:before {background-image : url(images/ani_flower_03.png),url(images/ani_flower_04.png);
+		position : absolute; background-position : 300px 50px, 500px 0px; z-index : 100;}
+
+		#slogan h1 {width : 110px; height : 90px; white-space : nowrap;
+			text-indent : 115px; overflow : hidden; background : url(images/coffee.png) no-repeat;
+			background-size : 110px 90px; position : absolute; top : 30px; left : 30px;}
+		#slogan p {margin : 0 100px 0 200px; color : #a09784; font-size : 13px;}
+
+		#slogan q {font-weight : bold; }
+		#slogan q:before {font-size : 36px; color : #765725;
+			position : relative; top : 14px; left : -5px;}
+		.guide,adress,.copyright {margin : 0 100px 0 200px; }
+		.footerLogo {position : absolute; top : 45px; left : 25px;}
+		.guide {background-color : #7b8385; border-radius :5px; text-align : center;
+		padding-left : 20px; margin-bottom : 10px; text-transform : uppercase;}
+		.guide li {display : inline-block; padding : 10px 10px 10px 10px;}
+		.guide li a {color : #fff;}
+		.guide li:after {content : "|"; color : #fff; padding-left : 12px;}
+		.guide li:last-child:after {content : "";}
+		address {font-style : normal; margin-bottom : 5px; margin-left : 200px;}
+		address span {margin-right : 10px;}
+		address span a{position : relative; top : -1px;}
+		.techLogoArea {position : absolute; top : 0; right : 0;}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="UTF-8">
+	  <title> layout1 </title>
+	 <style>
+		* {margin : 0px; padding : 0px; box-sizing : border-box; border : 1px dashed red;}
+		
+		.wrapper {
+				width : 1400px;
+				margin : 0 auto;
+				}
+			
+			.wrapper>* {margin : 10px 0;}
+			
+			.header {overflow : hidden;}
+			.HL,.HR {height : 100px;}
+			.HL {width : 590px; float : left;}
+			.HR {width : 790px; float : right;}
+			
+			.navi {height : 100px;}
+			
+			.content {overflow : hidden;}
+			.CL,.CR {overflow : hidden; width : 690px;}
+			
+			.CL {float : left; position : relative;}
+				.CL>div {width :340px; height : 145px; position : absolute;border:1px dashed blue;}
+				 .CLLT {top : 0px; left :0px;}
+				 .CLLB {top : 0px; left:0px;}
+				 .CLRT {top : 0px; left:0px;}
+				 .CLRB {top : 0px; left:0px;}
+			
+			.CR {float : right; height : 300px;}
+
+			.bottom {overflow : hidden;}
+				.BL,.BR {height : 100px; width : 690px;}
+				.BL {float : left;}
+				.BR {float : right;}
+					.BRL,.BRR {width : 340px; height : 100px;}
+					.BRL {float : left;}
+					.BRR {float : right;}
+					
+			.footer {height : 100px;}
+	
+	 </style>
+	</head>
+	<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="HL">1</div>
+			<div class="HR">2</div>
+		</div>
+		
+		<div class="navi">3</div>
+		
+		<div class="content">	
+			<div class="CL">
+				<div class="CLLT">4</div>
+				<div class="CLLB">5</div>
+				<div class="CLRT">6</div>
+				<div class="CLRB">7</div>
+			 </div>
+			 
+			<div class="CR">8</div>			
+			</div>
+			
+		<div class="bottom">
+			<div class="BL">9</div>			
+		 <div class="BR">
+		  <div class="BRL">10</div>
+		  <div class="BRR">11</div>
+		 </div>
+		</div>
+		
+		<div class="footer">12</div>
+	</div>
+
+	</div>
+	</body>
+</html>   

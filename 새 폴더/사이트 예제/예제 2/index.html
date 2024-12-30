@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+	<title>사이트 예제2</title>
+	<style>
+	* {margin : 0; padding : 0; border : 1px dashed red;}
+		ul { list-style : none; text-align : center;}
+		ul li {display : inline-block;}
+		a:link, a:visited {color : #333; text-decoration : none;}
+		a:hover, a:active {color : #f00; text-decoration : none;}	
+			
+	.wrapper {width : 1400; margin 0 auto;}
+	.wrapper>* {position : relative;}
+	
+		h1 {height : 100px;}
+		p {position : absolute; top : 0; left : 50%;	font-size : 45px;
+	font-family : HY견명조; margin-left : -300px;
+	font-weight : bold;
+	text-align : center;
+	position : absolute;
+	width : 600px;
+	height : 100px;
+	line-height : 100px;}
+		.infolink {position : absolute; top : 0; right : 0;}
+		.linkul li{padding-left : 20px;}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1><a href="index.html"><img src="images/logo.png" alt="로고"></a></h1>
+			<p>Web Programming</p>		
+			<div class="infolink">
+			<ul class="linkul">
+				<li><a href="#">한국어</a></li>
+				<li><a href="#">영어</a></li>
+				<li><a href="#">Sitemap</a></li>
+			</ul>			
+			</div>
+		</div>
+		<div class="nav">
+			<ul class="mainmenu">
+				<li><a href="#">웹프로그래밍</a></li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li><a href="#">jQuery</a></li>
+			</ul>
+		</div>
+		<div class="banner">
+			<img src="images/webpg.jpg" alt="배너 이미지" width="1400" height="300">
+		</div>
+		<div class="content">
+			<div class="box">
+				HTML에 대한 소개
+			</div>
+			<div class="box">
+				CSS에 대한 소개
+			</div>
+			<div class="box">
+				JavaScript에 대한 소개
+			</div>
+			<div class="box">
+				jQuery에 대한 소개
+			</div>
+		</div>
+		<div class="footer">
+			<div class="btlogo">
+				<img src="images/logo1.png" alt="하단로고">
+			</div>
+			<div class="copy">
+				저작권
+			</div>
+			<ul>
+				<li><a href="#"><img src="images/html5_logo.png" alt="링크1"></a></li>
+				<li><a href="#"><img src="images/css3_logo.png" alt="링크2"></a></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

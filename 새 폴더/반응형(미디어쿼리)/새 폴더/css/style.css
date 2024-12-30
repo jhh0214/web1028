@@ -1,0 +1,75 @@
+* {
+	margin : 0 auto;
+	padding : 0;
+	box-sizing : border-box;
+}
+
+
+body {background : url(../windmill.jpg) no-repeat right bottom fixed;
+background-size: cover;}
+
+a:link ,a:hover,  a:visited {color : #fff;
+text-decoration : none;
+text-shadow : 1px 1px 0 #283744;}
+
+nav {width : 100%;
+background : #34495e;
+font-size : 1.2em;
+font-weight : bold; 
+position : relative;}
+
+nav ul li {width : 100%;
+text-align : center;
+border-bottom : #283744;
+}
+
+nav ul li a {display : block;
+height : 50px;
+line-height : 50px;}
+
+nav a#trigger {display : block;
+background-color : #283744;
+padding-left : 15px;
+width : 100%;
+height : 40px;
+line-height : 40px;
+position : relative;
+}
+
+nav a#trigger:after {
+	content : "";
+	width : 30px;
+	height : 30px;
+	position : absolute;
+	top : 10px;
+	right : 15px;
+	background : url(../nav.png) no-repeat;
+}
+
+@media screen and (min-width : 721px) {
+	nav {
+		height : 40px; 
+		border-bottom : 2px solid #34495e;
+	}
+	nav ul {
+		display : block;
+		width : 720px;
+		height : 40px;
+		margin : 0 auto; 
+		}
+	nav ul li {
+		display : inline-block;
+		width : 120px;
+		border-bottom : 0;
+		margin-right : -6px;
+	}
+	nav ul li a {
+		display : block;
+		font-size : 1em;
+		height : 40px;
+		line-height : 40px;
+	}
+	nav a#trigger {
+		display : none;
+	}
+}

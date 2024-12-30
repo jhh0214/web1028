@@ -1,0 +1,72 @@
+
+
+
+#contents {width : 620px; float : left; position : relative;}
+#twitter {float : right; width : 200px; 
+box-sizing : border-box; padding : 8px; position : relative;}
+#twitter:before {content : ""; width : 5px; height : 90%; display : inline-block; 
+position : absolute; left : -5px;  border-radius : 50%; 
+background: linear-gradient(to right,rgba() 0%,rgba() 100%);}  
+#twitter h1 {border-bottom : 1px solid #ccc; padding : 10px 0; font-weight : normal;}
+#twitter h1:before {content : "t"; font-size : 18px; display : inline-block; 
+font-family : webcafeIcon; color : #00acee; position : relative; top : 3px; padding-right : 3px;}
+.twitterUserProfile {width : 45px; height : 45px; margin-right : 10px;}
+.twitterArticle {margin : 20px 0; clear : both;}
+.twitterContent {line-height : 1.4; margin : 10px 0;}
+.twitterContent mark{background : transparent; font-weight : bold;}
+.twitterArticle time {float : right; color : #777;}
+
+
+.location {position : absolute; top:8px; right : 30px;}
+.location strong{color : #95bb1a;}
+#contents h1 {font-size : 18px; font-family : nanumEX; color : #ff3c00; 
+border-bottom : 2px solid red; padding : 15px 0; margin-bottom : 20px; 
+text-shadow : 2px 2px 0 #ccc;}
+
+.gallery li{display : inline-block; float : left; width : 135px; margin : 0 10px 30px; text-align : center;}
+.gallery ul {margin-top : 30px;}
+.gallery figure {background : #fff; box-shadow : 1px 1px 8px 0 #ccc; padding : 10px; margin-bottom : 10px;}
+.gallery imag {border : 1px solid #ccc;}
+
+.paging {text-align : center; margin-top : 10px;}
+.btnPrev,.btnNext {width : 20px; height : 20px; overflow : hidden; 
+display : inline-block;  text-indent : 20px; white-space : nowrap; vertical-align : middle;
+background : url(images/back_forward.png) no-repeat;}
+.btnNext {transform: scale(-1, 1);}
+.paging strong{color : #ff3c00; border-bottom : 1px solid #ff3c00;}
+.paging strong,.paging a {margin : 0 5px;}
+
+.allPost {margin : 35px 0 10px; text-align : right;}
+.allPost:before {font-family:webcafeIcon; content:"d"; font-size : 18px; position : relative;
+top : 5px;}
+.boardTable {width : 100%; border-collapse : collapse;  text-align : center;}
+.boardTable a {display : inline-block; width : 80%; white-space : nowrap; overflow : hidden; text-overflow : ellipsis;}
+.bbsNumber {width :15%; border-top-left-radius : 10px;}
+.bbsTitle {width :50%; }
+.bbsDate {width :20%; }
+.bbsHit {width :15%; border-top-right-radius : 10px;}
+.boardTable th {background-image : linear-gradient(to bottom, #ffc848 0%, #ff8208 40%, #ff8208 60%, #ffc848 100%);
+color : #fff;}
+.boardTable th ,.boardTable td {padding : 10px 0;}
+.boardTable td:nth-child(2) {text-align : left;}
+.boardTable td:nth-child(2) span {float:right;}
+.boardTable td {border-bottom :1px solid #ccc;}
+
+.formSign {
+	margin : 30px 0 10px; 
+	text-align : right;
+	}
+.require {
+	display : inline-block; 
+	width : 10px;
+	height : 12px;
+	overflow : hidden;
+	text-indent : 20px;
+	}
+.require:before {
+	content : "s";
+	font-family : webcafeIcon;
+	position : relative;
+	left : -20px;
+	color : #f48002;
+	}
