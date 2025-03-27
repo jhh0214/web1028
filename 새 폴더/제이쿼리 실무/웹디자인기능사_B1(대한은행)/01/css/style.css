@@ -61,7 +61,7 @@ header {
 	background-color : #fff;
 	position : absolute;
 	z-index : 1;
-	display : none;
+	display : block;
 }
 .submenu > li > a {
 	display : block;
@@ -74,6 +74,8 @@ header {
 	font-size : 14px;
 	font-weight : bold;
 }
+
+
 .submenu > li > a:hover {
 	background-color : #30a3f3;
 }

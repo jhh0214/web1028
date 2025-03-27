@@ -4,10 +4,10 @@ $(document).ready(function(){
 		st();
 	});
 	$(".navi > li").mouseover(function(){
-		$(".submenu",this).stop().slideDown(500)
+		$(".submenu").stop().slideDown(500)
 	});
 	$(".navi > li").mouseout(function(){
-		$(".submenu",this).stop().slideUp(500);
+		$(".submenu").stop().slideUp(500);
 	});
 	$(".notice li:first").click(function(){
 		$("#modal").addClass("active");
