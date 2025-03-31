@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* 헤더 */
+
+header {
+    position:fixed; left:0; top:0; width:100%; height:70px;
+    background: rgba(0, 0, 0,0.75); z-index:10;
+}
+
+/*
+1. 서브 짝대기 보우더 바텀 적용
+2. 넵바 메인 메뉴 가운데 정렬 
+3. 로고에 tb 이후 없어지는 텍스트 span 태그 i 로 대체해서
+*/
+
+@keyframes baStr {
+    0% { width: 0; }
+    100% { width: 80px;}
+}
+
+@keyframes baEnd {
+    0% { width: 80px; }
+    100% { width: 0;}
+}
+
+@media screen and (min-width:1550px) {
+    nav {
+        display: flex; justify-content: space-between; align-items: center;
+        width: 1550px; height: 70px; margin: 0 auto;
+    }
+
+    .curtain, .sub-menu, .sub-ba {position: absolute; display: none;}
+
+    .curtain {
+        position: absolute; left: 0; top: 0;
+        width: 100%; height: 210px;
+        background: rgba(0, 0, 0,0.95);
+        z-index: -1;
+    }
+    
+    #main-menu {
+        position: absolute;
+        left: 50%; top:0;
+        transform: translate(-50%,0);
+    }
+    
+    #trigger {display: none;}
+    
+    .logo {
+        color: #f6f6f6;
+    }
+    
+    .logo span { color: #85c3f3;}
+
+    i{
+        font-style: normal;
+    }
+    
+    #main-menu {
+        display: flex;
+    }
+
+    #main-menu > li {
+        position: relative;
+        padding: 23px 30px 23px;
+    }
+    
+    #main-menu > li > a {
+        color: #f6f6f6;
+    }
+    
+ 
+    .sub-menu {
+        width: 100%;
+        left: 0; top:70px;
+    }
+    
+    .sub-ba {
+        left: 50%; top: 100%;
+        width: 80px; height: 2px;
+        background: #f6f6f6;
+        border: 0.5px;
+        transform: translate(-50%,0);
+        z-index: 20;
+        animation: baStr 0.5s ease-in-out none alternate;
+    }
+
+    .ba-end { animation: baEnd 2.5s ease-in-out infinite alternate;}
+
+    
+    .sub-menu > li > a {
+        padding: 30px 30px;
+        text-align: center;
+        color: #f6f6f6;
+    }
+    
+    .sub-menu > li:last-child > a {padding-top: 0;} 
+    
+    .top-menu {
+        display: flex;
+    }
+    
+    .top-menu li { margin-left: 15px;}
+    
+    .top-menu li a { color: #f6f6f6;}
+}
+@media screen and (min-width:1150px) and (max-width:1549px) {
+    nav {width: 1150px; height: 70px;}
+}
+
+@media screen and (min-width:750px) and (max-width:1149px) {
+    nav {width: 100%; height: 65px;}
+    #main-menu, .main-hav {display: none;}
+    .logo {left: 50%; top: 50; transform: translate(-50%,-50%);}
+    #trigger{display: block;}
+    #trigger > span {
+        left: 0; top: 50%;
+        width: 30px; height: 4px;
+        color: #ff0000;
+        background: #ff0000;
+        transform: translate(0, -50%);
+        z-index: 30;
+    }
+    .lo-w { color: #f6f6f6;}
+    .lo-t {display: none;}
+}
+
+@media screen and (max-width:749px) {
+    nav {width: 100%; height: 65px;}
+}
+
+

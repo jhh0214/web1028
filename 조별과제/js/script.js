@@ -1,10 +1,10 @@
 $(document).ready(function(){
     // 네비게이션 
-	$(".menu > li").mouseover(function(){
+	$("#main-menu > li").mouseover(function(){
 		$(".sub-menu").stop().slideDown(300);
         $("header").stop().animate({height: "165px"},300);
 	});
-	$(".menu > li").mouseout(function(){
+	$("#main-menu > li").mouseout(function(){
 		$(".sub-menu").stop().slideUp(300);
         $("header").stop().animate({height: "70px"},300);
 	});

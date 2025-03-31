@@ -12,40 +12,56 @@ header {
     width: 100%;
     height : 70px;
     background-color: rgba(0,0,0,0.8);
-    
-
 }
-.header-wrap {
+nav {
+    display: flex;
+    justify-content: space-between;
     width: 1500px;
     position: relative;
     margin: 0 auto;
 }
 .logo {
-    float: left;
-}
-.logo a{
     color: #fff; 
     font-size: 35px;
     line-height: 70px;
 }
-.logo a span {
+.logo span {
     color : #74b3e4;
 }
-.menu {
+.logo i {
+    font-style: normal;
+}
+#main-menu {
     position: absolute;
     left: 50%;
     transform: translate(-50%,0);
 }
-.menu>li{
+#main-menu>li{
+    position: relative;
     float: left;
 }
-.menu>li>a {
-    display: block;
-    width: 130px;
+#main-menu>li>a {
+    display: inline-block;
+    margin: 0 30px;
     text-align: center;
     line-height: 70px;
     font-size: 16px;
-    color : #fff;
+    color :#fff;
+}
+#main-menu>li::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 2px;
+    width: 0;
+    background: #3598db;
+    transition: all 0.2s ease-in;
+}
+#menu>li:hover::before{
+    width: calc(100% - 60px);
 }
 .sub-menu {
     position: absolute;
@@ -61,135 +77,35 @@ header {
     font-size: 16px;
     color : #fff;
 }
-header a:hover {
+ul a:hover {
     color : #74b3e4;
 }
 
-.register {
-    float: right;
-}
-.register li {
+.top-menu li {
     display: inline-block;
 }
-.register li a { 
+.top-menu li a { 
     font-size: 16px;
     color : #fff;
     line-height: 70px;    
 } 
-.register li a:first-child {
+.top-menu li a:first-child {
     margin-left: 35px;
 }
-.register a:hover {
+.top-menu a:hover {
     color : #74b3e4;
 }
 
-/* 메인 영역 */
-.bn1 {
-    height : 100vh;
-    position: relative;
-    color : #fff;
+#trigger {
+    display: none;
 }
-.bn1::before {
-    content: "";
-
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.6);
-}
-.bn1 > div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    text-shadow: 1px 2px 3px #000;
-    white-space: nowrap;
-    user-select:none
-}
-.bn1 h2 {
-    font-size: 80px;
-}
-.bn1 h2>span {
-    color: #74b3e4;
-}
-.bn1 h3 {
-    font-size: 40px;
-}
-
-/* 섹션 01 */
-.s01 {
-    margin-top: 100px;
-    overflow: hidden;
-}
-.introduce-img {
-    width : 1000px;
-    height: 550px;
-    border-radius: 20px;
-    float: left;
-}
-.introduce-img::before {
-    content: "";
-    display: block;
-    width: inherit;
-    height: inherit;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 20px;
-}
-/* 
-각자 스티일시트 추가 
-.introduce-img {
-    background-image: url(../img/section01_img.jpg);
-} 
-*/
-.introduce-text {
-    width: 450px;
-    height: 550px;
-    border-radius: 10px;
-    background-color: #eee;
-    float: right;
-    position: relative;
-}
-.introduce-text>*{
-    text-align: center;
-}
-.introduce-text>h4 {
-    margin-top: 75px;
-    font-size: 40px;
-}
-.introduce-text>h5 {
-    margin-top: 20px;
-    font-size: 28px;
-}
-.introduce-text>p{
-    padding: 0 110px;
-    margin-top: 70px;
-    font-size: 16px;
-}
-.introduce-text>.more{
-    position: absolute;
-    left : 50%;
-    transform: translate(-50%,0);
-    bottom: 90px;
-    width: 160px;
-    height: 45px;
-    line-height: 45px;
-    border: 2px solid #000;
-    border-radius: 13px;
-    font-weight: 600;
-    overflow: hidden;
-}
-
-/* section03 */
-
 
 /* 풋터 영역 */
 footer {
     width: 100%; background: #85c3f3;
 }
 
-footer .foot {
+footer .ftwrap {
     display:flex;
     justify-content: space-between; align-items: 
     center;
@@ -197,8 +113,8 @@ footer .foot {
     width: 1550px; height: 200px;
 }
 
-.foot h1 {font-size: 35px; color: #f6f6f6;}
-.foot p {font-size: 18px; color: #f6f6f6;}
+.ftwrap h1 {font-size: 35px; color: #f6f6f6;}
+.ftwrap p {font-size: 18px; color: #f6f6f6;}
 
 .iconm {
     display:flex;
