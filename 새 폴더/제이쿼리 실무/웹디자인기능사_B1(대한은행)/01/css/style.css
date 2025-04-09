@@ -87,6 +87,7 @@ header {
 	overflow : hidden;
 }
 .slidelist {
+	border: 10px solid #ccc;
 	width : 3600px;
 }
 .slidelist a {

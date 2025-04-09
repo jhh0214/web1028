@@ -79,10 +79,12 @@ h2 {margin-bottom: 10px; color: #f6f6f6; font-size: 80px; font-weight: 600;}
     width: 560px;
     height: 370px;
     left: 90px; bottom: 0;
+    background: #eee;
+    overflow: hidden;
+}
+.txt-list {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
-    background: #eee;
 }
 .move {
     flex: 0 0 560px;
@@ -95,6 +97,7 @@ h2 {margin-bottom: 10px; color: #f6f6f6; font-size: 80px; font-weight: 600;}
     width: 190px;
     height: 200px;
     right: 90px; bottom: 0;
+    background: url('../img/img2.jpg');
     border: 1px solid darkred;
 }
 

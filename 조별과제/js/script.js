@@ -34,35 +34,38 @@ $(document).ready(function() {
     const totalSlides = 3; // 총 슬라이드 수
     const slideWidth = $(".slide-txt > div").outerWidth();  
     
-    // 이미지 업데이트 함수
+   
     function updateImage() {
-        // 메인 이미지 업데이트 (현재 인덱스)
+        
         $('.slide-img').css('background', `url('img/img${currentIndex}.jpg')`);
         
-        // 미리보기 이미지 업데이트 (다음 슬라이드, 순환)
         let previewIndex = currentIndex + 1;
         if (previewIndex > totalSlides) {
-            previewIndex = 1; // 순환
+            previewIndex = 1; 
         }
         $('.slide-preview').css('background', `url('img/img${previewIndex}.jpg')`);
     }
     
     // 슬라이드 이전 버튼 클릭
     $('.prev-btn').click(function() {
-        currentIndex = currentIndex === 1 ? totalSlides : currentIndex - 1; // 슬라이드 순환
+        currentIndex = currentIndex === 1 ? totalSlides : currentIndex - 1; 
         updateImage();
-        $(".move").css({"marginLeft": "-"+slideWidth+"px"});  
-        $(".slide-txt > div:last").prependTo(".slide-txt");  
-        $(".move").css({"marginLeft": "0"}); 
+        $(".txt-list").animate({"marginLeft": "-"+slideWidth+"px"},500,function(){
+
+            $(".txt-list > div:last").prependTo(".txt-list");  
+            $(".txt-list").css({"marginLeft": "0"}); 
+        });  
     });
     
     // 슬라이드 다음 버튼 클릭
     $('.next-btn').click(function() {
-        currentIndex = currentIndex === totalSlides ? 1 : currentIndex + 1; // 슬라이드 순환
+        currentIndex = currentIndex === totalSlides ? 1 : currentIndex + 1; 
         updateImage();
-        $(".move").css({"marginLeft": "-"+slideWidth+"px"});  
-        $(".slide-txt > div:first").appendTo(".slide-txt");  
-        $(".move").css({"marginLeft": "0"}); 
+        $(".txt-list").animate({"marginLeft": "-"+slideWidth+"px"},500,function(){
+
+            $(".txt-list > div:first").appendTo(".txt-list");  
+            $(".txt-list").css({"marginLeft": "0"}); 
+        });  
     });
     
 
