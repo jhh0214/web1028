@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script src="https://kit.fontawesome.com/11390cb447.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            width: 1260px;
+            margin: 0 auto;
+        }
+        button {
+            background: transparent;
+        }
+        .wrap-header {
+            display: grid;
+            grid-template-areas:
+            "bi search utility"
+            "navi navi navi";
+            grid-template-columns: 161px 554px 1fr;
+            grid-template-rows: 84px 64px;
+            align-items: center;
+            gap: 30px;
+        }
+        .search button {
+            width: 100%;
+            height: 52px;
+            border: 2px solid #2d67ff;
+            border-radius: 28px;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .utility {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap : 20px;
+        }
+        .account-panel {
+            display: flex; 
+            gap: 10px;
+        }
+        .wrap-service ul {
+            position: absolute;
+        }
+        .wrap-service button {
+            padding: 0 13px;
+            height: 32px;
+            border: 1px solid #d7dce5;
+            border-radius: 16px;
+            color: #373f57;
+        }
+        .service-menu {
+            display: none;
+        }
+        .service-col {display: flex; gap: 5px;}
+        .navi {
+            display: grid;
+            grid-area: navi;
+            grid-template-areas: "btn-more wrap-gnb item";
+            grid-template-columns: 60px 1fr auto;
+            align-items: center;
+        }
+        .gnb {
+            display: flex;
+            justify-content: space-evenly
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .content > div {
+            border: 1px solid #000;
+            height: 300px;
+        }
+        .banner {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .banner > div {
+            border: 1px solid #000;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="wrap-header">
+        <h1><a class="logo">LOGO</a></h1>
+        <div class="search">
+            <form>
+                <button class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </div>
+        <div class="utility">
+            <div class="account-panel">
+                <a href="#">로그인</a>
+                <hr>
+                <a href="#">회원가입</a>
+            </div>
+            <div class="wrap-service">
+                <button class="service-btn">기업서비스</button>
+                <ul class="service-menu">
+                    <li class="service-col"><a href="#">로그인</a><hr><a href="#">회원가입</a></li>
+                    <li><a href="#">기업홈</a></li>
+                    <li><a href="#">공고등록</a></li>
+                    <li><a href="#">지원자 관리</a></li>
+                    <li><a href="#">인재풀</a></li>
+                    <li><a href="#">뭐 이것저것</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navi">
+            <button class="btn-more">더보기</button>
+            <div class="wrap-gnb">
+                <ul class="gnb">
+                    <li><a href="#">채용정보</a></li>
+                    <li><a href="#">취업축하금</a></li>
+                    <li><a href="#">신입·인턴</a></li>
+                    <li><a href="#">합격전략</a></li>
+                    <li><a href="#">기업·연봉</a></li>
+                    <li><a href="#">이것 저것</a></li>
+                </ul>
+            </div>
+            <div class="item">뭐 이것저것</div>
+        </div>
+    </div>
+    </header>
+    <section class="content">
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <section class="banner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+<script>
+    const btn = document.querySelector('.service-btn');
+    const menu = document.querySelector('.service-menu');
+  
+    btn.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</html>

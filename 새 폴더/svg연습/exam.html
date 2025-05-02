@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>라인 + 조각 합체 애니메이션</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .line {
+      background: white;
+      height: 2px;
+      width: 0;
+      position: relative;
+      overflow: hidden;
+      transition: width 1.5s ease, height 1s ease, opacity 1s ease; 
+      opacity: 1;
+    }
+
+    .line.fade-out {
+      opacity: 0;
+    }
+
+    .line.expand {
+      width: 100%;
+    }
+
+    .line.expand-height {
+      height: 500px;
+    }
+
+    svg {
+      width: 600px;
+      height: 600px;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    polygon, path, rect {
+      transition: transform 1s ease, opacity 1s ease;
+    }
+
+    /* 초기 위치 - 화면 밖 */
+    #f-part1 { transform: translateX(-800px); }
+    #f-part2 { transform: translateY(-800px); }
+    #f-part3 { transform: translateX(800px); }
+    #w-part1 { transform: translateY(800px); }
+    #w-part2 { transform: translateX(-800px); }
+    #w-part3 { transform: translateY(-800px); }
+    #w-part4 { transform: translateX(800px); }
+  </style>
+</head>
+<body>
+
+<div class="line">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
+    <g fill="black">
+      <polygon id="f-part1" points="111.44,338.3 140.33,338.3 140.33,237.03 224.99,237.03 224.99,213.12 140.33,213.12 140.33,196.79 111.44,196.79"/>
+      <rect id="f-part2" x="175.59" y="114.51" width="56.38" height="24.24"/>
+      <polygon id="f-part3" points="111.44,114.51 111.44,196.79 140.33,196.79 140.33,138.74 175.59,138.74 175.59,114.51"/>
+      
+      <polygon id="w-part1" points="283.43,114.51 252.88,114.51 276.8,208.78 305.54,208.78"/>
+      <path id="w-part2" d="M432.84,228.06l-27.23-113.55H375.4l-24.95,94.27h24.93c6.19-22.71,10.27-41.28,13.63-60.07h0.66
+        c2.99,22.58,7.64,44.49,14.61,73.05l28.22,116.54h5.78v-86.72C436.54,243.79,434.71,235.92,432.84,228.06z"/>
+      <path id="w-part3" d="M345.52,227.4c-7.64,28.89-14.61,55.45-18.26,77.7h-0.66c-3.98-21.58-9.96-49.47-16.6-77.36l-4.45-18.95H276.8
+        l32.86,129.52h30.21l31.88-116.54c1.29-4.49,2.49-8.8,3.63-12.98h-24.93L345.52,227.4z"/>
+      <path id="w-part4" d="M526.14,114.51h-29.55L467.04,227.4c-6.97,27.89-13.28,52.79-17.93,77.36h-0.66c-2.34-16.6-5.99-34.67-10.15-53.19v86.72
+        h24.43L526.14,114.51z"/>
+    </g>
+  </svg>
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    $('.line').addClass('expand');
+
+    setTimeout(function(){
+      $('.line').addClass('expand-height');
+    }, 1500);
+
+ 
+    setTimeout(function(){
+      $('#f-part1').css('transform', 'translateX(0)');
+      $('#f-part2').css('transform', 'translateY(0)');
+      $('#f-part3').css('transform', 'translateX(0)');
+      $('#w-part1').css('transform', 'translateY(0)');
+      $('#w-part2').css('transform', 'translateX(0)');
+      $('#w-part3').css('transform', 'translateY(0)');
+      $('#w-part4').css('transform', 'translateX(0)');
+    }, 2500); 
+
+    setTimeout(function(){
+      $('#f-part1').css('transform', 'translateX(-200px)');
+      $('#f-part2').css('transform', 'translateX(-200px)');
+      $('#f-part3').css('transform', 'translateX(-200px)');
+      $('#w-part1').css('transform', 'translateX(200px');
+      $('#w-part2').css('transform', 'translateX(200px');
+      $('#w-part3').css('transform', 'translateX(200px');
+      $('#w-part4').css('transform', 'translateX(200px');
+    }, 3500);
+    
+    setTimeout(function(){
+      $('.line').addClass('fade-out');
+    }, 5500);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+질문
+1. ex, ok jsp 는 모든 페이지에 적용하는가? 아니면 몇몇 페이지는 alert 으로 알림?
+2. 테이블 구조 설정을 이력서
+
+
+========== 데이터베이스 명 finework ==========
+
+< 디렉토리 구조 >
+- views
+  - emp
+    - member
+      - login
+        - // ex, ok
+      - register
+        - // ex, ok
+      - modify
+        - // ex, ok
+      - mypage
+        - // ex, ok
+      - find_id
+        - // ex, ok
+      - find_pwd
+        - // ex, ok
+
+
+< 취업자 관련 테이블 >
+
+
+
+[ 회원정보 emp_member ]
+CREATE TABLE `emp_member` (
+  `emp_id` char(12) NOT NULL DEFAULT '' COMMENT '아이디',
+  `emp_pwd` char(15) DEFAULT NULL COMMENT '비밀번호',
+  `emp_name` varchar(20) DEFAULT NULL COMMENT '이름',
+  `emp_phone` char(11) DEFAULT NULL COMMENT '전화번호',
+  `emp_email` varchar(30) DEFAULT NULL COMMENT '이메일',
+  `emp_addr` varchar(30) DEFAULT NULL COMMENT '주소',
+  `emp_reg_date` date DEFAULT NULL COMMENT '가입일',
+  `emp_mod_date` date DEFAULT NULL COMMENT '수정일',
+  PRIMARY KEY (`emp_id`)
+);
+
+[ 이력서 resume ](총 컬럼 35개)
+- 학력사항(컬럼 10개)
+  - 최종학력(컬럼x)
+    - 학교 + 상태
+    - 중/고
+      - 졸업년월
+      - 학교명
+    - 대학교
+      - 졸업년월
+      - 학교명
+      - 전공
+    - 대학원
+      - 졸업년월
+      - 학위
+      - 학교명
+      - 전공
+
+- 경력사항(컬럼 6개 / 여러 아티클 생성 가능)
+  - 신입/경력
+  - 회사명
+  - 근무기간(컬럼x)
+    - 입사연월
+    - 퇴사연월
+    - 재직중
+  - 담당업무
+
+- 희망근무조건(컬럼 13개)
+  - 근무지(컬럼x / 여러 아티클 생성 가능)
+    - 시/도 + 시/군/구
+    - 재택근무
+  - 업직종(컬럼x)
+    - 검색
+  - 근무형태(컬럼x)
+    - 알바
+    - 정규직
+    - 계약직
+    - 파견직
+    - 인턴
+  - 근무기간
+  - 근무일시(컬럼x)
+    - 요일 + 시간대
+  - 급여(컬럼x)
+    - 시/일/주/월급, 연봉
+    - 액수
+    - 추후협의
+
+- 자기소개(컬럼1개)
+  - 자기소개
+
+- 자격증(컬럼 1개 / 여러 아티클 생성 가능) 
+  - 발행처 + 자격증 이름 + 연도
+
+- 취업우대사항(컬럼 4개)
+  - 장애여부
+  - 국가보훈
+  - 고용지원금
+  - 병역사항(컬럼x)
+    - 면제/군필/미필 + 병력내용
+
+CREATE TABLE emp_resume (
+  emp_id char(12) NOT NULL DEFAULT '' COMMENT '아이디',
+  emp_school    char(12)    comment "학교 및 상태",
+  emp_midschool_name   varchar(12)   COMMENT '중학교 명',
+  emp_midschool_grad   date   COMMENT '졸업년월',
+  emp_highschool_name   varchar(12)   COMMENT '고등학교 명',
+  emp_highschool_grad   date   COMMENT '졸업년월',
+  emp_univer_name   varchar(12)   COMMENT '대학교 명',
+  emp_univer_major   varchar(10)   COMMENT '전공',
+  emp_univer_grad   date   COMMENT '졸업년월',
+  emp_gradschool_name   varchar(12)   COMMENT '대학교 명',
+  emp_gradschool_degree   char(10)   COMMENT '학위',
+  emp_gradschool_major   varchar(10)   COMMENT '전공',
+  emp_gradschool_grad   date   COMMENT '졸업년월',
+  emp_Career    varchar(4)    comment '신입/경력',
+  emp_company    varchar(20)    comment '회사명',
+  emp_join_date   date   COMMENT '입사년월',
+  emp_leave_date   date   COMMENT '입사년월',
+  emp_employed   char(6)   COMMENT '재직여부',
+  emp_job_description   text(500)   COMMENT '재직여부',
+  emp_location   varchar(40)   COMMENT '근무지',
+  emp_worktype   char(8)   COMMENT '재택근무 여부',
+  emp_job_search   char(8)   COMMENT '직종 검색',
+  emp_jobtype    varchar(26)   COMMENT '근무형태',
+  
+  
+);
+
+< 기업정보 관련 테이블 >
+
+[로그인]
+CREATE TABLE `com_member` (
+  `com_bln` char(12) DEFAULT NULL COMMENT '사업자등록증 번호',
+  `com_id` char(12) NOT NULL DEFAULT '' COMMENT '아이디',
+  `com_pwd` char(15) DEFAULT NULL COMMENT '비밀번호',
+  `com_email` varchar(30) DEFAULT NULL COMMENT '이메일',
+  `com_reg_date` date DEFAULT NULL COMMENT '가입일',
+  `com_mod_date` date DEFAULT NULL COMMENT '수정일',
+  PRIMARY KEY (`com_id`)
+);
+
+< 채용공고 테이블 >
+
+- 상세검색
+  - 지역
+    - 시*도
+      - 시*구*군
+        - 동*읍*면    
+  - 직무/직업
+    - 대분류(음식, 매장관리/판매, 서비스, 사무직, 상담/영업, 생산/건설/노무, IT/기술, 디자인, 미디어, 운전/배달, 병원, 교육
+      - 업직종(대분류에서 선택 시 관련 직종~)
+  - 근무조건
+    - 근무 기간
+    - 근무 요일
+    - 근무시간
+  - 상세조건
+    - 신입/경력
+    - 성별
+    - 연령
+    - 고용형태
+    - 키워드(검색 시 제외하는 것)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
